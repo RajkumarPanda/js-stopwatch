@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  height: 100dvh;
+  width: 100%;
+  background: #9090ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.wrapper {
+  height: auto;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  border-radius: 10px;
+  padding: 15px;
+}
+.wrapper > h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.clock-box {
+  height: 200px;
+  width: 100%;
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 90px;
+  font-weight: 500;
+  font-family: monospace;
+  position: relative;
+}
+.clock-box > div {
+  position: relative;
+  text-align: center;
+}
+
+.minutes::before,
+.seconds::before,
+.miliseconds::before {
+  position: absolute;
+  content: "";
+  font-size: 20px;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.minutes::before {
+  content: "Minutes";
+}
+
+.seconds::before {
+  content: "Seconds";
+}
+
+.miliseconds::before {
+  content: "Miliseconds";
+}
+
+.start-pause-section {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.startBtn {
+  padding: 10px 40px;
+  border-radius: 10px;
+  background: rgb(0, 64, 255);
+  cursor: pointer;
+}
+.pauseBtn {
+  padding: 10px 40px;
+  border-radius: 10px;
+  background: rgb(84, 0, 153);
+  cursor: pointer;
+}
+
+.reset-section {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.resetBtn {
+  padding: 10px 40px;
+  border-radius: 10px;
+  background: rgb(197, 0, 0);
+  cursor: pointer;
+}

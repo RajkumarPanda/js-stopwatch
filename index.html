@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/style.css" />
+  </head>
+  <body>
+    <!-- main contailer  -->
+    <main>
+      <!-- container for the whole  box  -->
+      <div class="wrapper">
+        <h1>Stopwatch</h1>
+
+        <!-- .container for the clock digits  -->
+        <div class="clock-box">
+          <div
+            id="minutes"
+            class="minutes">
+            00
+          </div>
+          <div class="">:</div>
+          <div
+            id="seconds"
+            class="seconds">
+            00
+          </div>
+          <div class="">:</div>
+          <div
+            id="miliseconds"
+            class="miliseconds">
+            000
+          </div>
+        </div>
+
+        <div class="start-pause-section">
+          <div
+            onclick="pauseFunc()"
+            id="pause"
+            class="pauseBtn">
+            Pause
+          </div>
+          <div
+            onclick="startFunc()"
+            id="start"
+            class="startBtn">
+            Start
+          </div>
+        </div>
+        <div class="reset-section">
+          <div
+            onclick="resetFunc()"
+            id="reset"
+            class="resetBtn">
+            Reset
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script src="/script.js"></script>
+</html>
