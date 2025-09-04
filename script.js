@@ -27,12 +27,11 @@ const startFunc = () => {
   if (timerRunning) return;
 
   timerRunning = true;
-  //
+
   // increasing the timer values in every 10ms
   interval = setInterval(() => {
     //
-    // increasing the miliseconds value by 10 in every 10ms
-    milisec += 10;
+    milisec += 10; // increasing the miliseconds value by 10 in every 10ms
 
     // so here if the milisec is equal to  1000 then we set the miniseconds to start from 0 and increasing the value of seconds by 1
     if (milisec === 1000) {
@@ -48,12 +47,13 @@ const startFunc = () => {
 
     // so here if the min is equal to 60 then we reset the seconds and miliseconds by 0  and stop the watch
     if (min === 60) {
-      milisec = 0;
-      sec = 0;
+      resetFunc();
+      return;
     }
 
-    // here we inject the timer values in out ui
-    miliseconds.textContent = (milisec < 100 ? "0" : "") + milisec;
+    // here we inject the timer values in our ui
+    miliseconds.textContent =
+      (milisec < 10 ? "00" : milisec < 100 ? "0" : "") + milisec;
     seconds.textContent = (sec < 10 ? "0" : "") + sec;
     minutes.textContent = (min < 10 ? "0" : "") + min;
 
